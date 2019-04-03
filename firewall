@@ -1,0 +1,38 @@
+nano /etc/rc.conf
+
+pf_enable="YES"
+pf_rules="/etc/pf.conf"
+pflog_enable="YES"
+pflog_logfiles="/var/log/pflog"
+
+***exit**
+if config
+ping 192.168.232.134 (in client)
+
+nano /etc/pf.conf
+
+*block = block log all
+*unblock = pass log all
+
+****exit****
+
+***everytime nk tukar block /unblock kena disable kan dulu 
+   dh tukar exit and save baru enable kan balik..
+   pastu buat load dan tgk sr
+
+
+
+3) enable 
+pfctl -e
+
+disable      *before block or unblock
+pfctl -d
+
+1) load
+pfctl -f/etc/pf.conf
+
+2) pfctl -sr 
+
+
+buka client try ping 
+
