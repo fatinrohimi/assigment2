@@ -24,7 +24,7 @@ class TCPClient {
  if(input == 1)
 {
     
-    String ipAddress = "192.168.232.136"; 
+    String ipAddress = "192.168.232.138"; 
 
     InetAddress geek = InetAddress.getByName(ipAddress); 
 
@@ -51,7 +51,7 @@ BufferedReader inFromUser = new BufferedReader(new
 InputStreamReader(System.in));
 
   
-  Socket clientSocket = new Socket("192.168.232.136", 22000);
+  Socket clientSocket = new Socket("192.168.232.138", 22000);
 
 DataOutputStream outToServer = new 
 DataOutputStream(clientSocket.getOutputStream());
